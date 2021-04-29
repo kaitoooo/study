@@ -1,0 +1,71 @@
+.kv {
+  position: relative;
+  background-color: #000;
+  width: 100%;
+  height: 100vh;
+
+  &__title {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    @include sp {
+      font-size: 1.5rem;
+    }
+  }
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    z-index: 2;
+    padding: 10px 10px 110px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: 'Noto Sans', sans-serif;
+    writing-mode: vertical-lr;
+    text-decoration: none;
+    @include sp {
+      font-size: 1.1rem;
+      bottom: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      height: 100px;
+      background: #fff;
+      animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+      @include sp {
+        height: 50px;
+        bottom: 30%;
+      }
+    }
+  }
+  @keyframes sdl {
+    0% {
+      transform: scale(1, 0);
+      transform-origin: 0 0;
+    }
+    50% {
+      transform: scale(1, 1);
+      transform-origin: 0 0;
+    }
+    50.1% {
+      transform: scale(1, 1);
+      transform-origin: 0 100%;
+    }
+    100% {
+      transform: scale(1, 0);
+      transform-origin: 0 100%;
+    }
+  }
+}

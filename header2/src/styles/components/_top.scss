@@ -1,0 +1,15 @@
+.top {
+  padding: 120px 0 20px;
+  @include sp {
+    padding: get_vw_sp(60) 0 get_vw_sp(20);
+  }
+
+  &__title {
+    font-size: get_vw(40);
+    text-align: center;
+    font-family: $font_all;
+    @include sp {
+      font-size: get_vw_sp(20);
+    }
+  }
+}

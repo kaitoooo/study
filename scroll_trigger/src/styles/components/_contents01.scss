@@ -1,0 +1,34 @@
+.contents01 {
+    position: relative;
+    padding: 0 0 get_vw(100);
+
+    &__img {
+        width: get_vw(400);
+        height: get_vw(900);
+        margin: 0 auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url('../img/img21.jpg');
+
+        &--no02 {
+            position: absolute;
+            left: 0;
+            top: get_vw(80);
+            background-image: url('../img/img27.jpg');
+        }
+        &--no03 {
+            position: absolute;
+            right: 0;
+            top: get_vw(180);
+            background-image: url('../img/img3.jpg');
+        }
+    }
+
+    &__text {
+        width: get_vw(600);
+        margin: 0 auto;
+        line-height: 1.4;
+        font-size: get_vw(26);
+    }
+}

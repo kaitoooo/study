@@ -1,0 +1,53 @@
+.l-contents {
+  width: 100%;
+  background: #fff;
+
+  &__title {
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+    padding: 100px 0 40px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    @include sp {
+      flex-wrap: wrap;
+    }
+
+    &--left {
+      width: 50%;
+      @include sp {
+        width: 100%;
+      }
+    }
+    &--right {
+      width: 50%;
+      @include sp {
+        width: 100%;
+      }
+
+      .right__text {
+        padding: 0 20px;
+        line-height: 1.5;
+        font-size: 1.5rem;
+        font-family: 'Noto Sans', sans-serif;
+        @include sp {
+          font-size: get_vw_sp(15);
+          margin: get_vw_sp(10) 0 get_vw_sp(30);
+        }
+      }
+    }
+  }
+}
+.fadeout {
+  opacity: 0;
+  transform: translateY(30px);
+  &.is-fadeIn {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.7s;
+  }
+}

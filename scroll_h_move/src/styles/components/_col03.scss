@@ -1,0 +1,31 @@
+.col03 {
+  position: relative;
+  background-color: #ff1f25;
+  padding: get_vw(100) get_vw(60) get_vw(120);
+  @include sp {
+    padding: get_vw_sp(50) get_vw_sp(30) get_vw_sp(60);
+  }
+  &__text {
+    text-align: right;
+    margin: 0 auto get_vw(30);
+    font-size: get_vw(100);
+    line-height: 1.4;
+    color: #fff;
+    font-family: 'Yusei Magic', sans-serif;
+    @include sp {
+      margin: 0 auto get_vw_sp(15);
+      font-size: get_vw_sp(25);
+    }
+  }
+  &__sent {
+    text-align: right;
+    font-size: get_vw(25);
+    line-height: 1.2;
+    font-weight: 100;
+    color: #fff;
+    font-family: 'Yusei Magic', sans-serif;
+    @include sp {
+      font-size: get_vw_sp(15);
+    }
+  }
+}

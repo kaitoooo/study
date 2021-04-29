@@ -1,0 +1,60 @@
+.percent {
+  position: fixed;
+  width: 5%;
+  height: 90%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 2%;
+  z-index: 999;
+  @include sp {
+    width: 90%;
+  }
+
+  &__wrap {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+
+    &.is-hide {
+      opacity: 0;
+      transition: all 0.5s;
+    }
+
+    &--figure {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 200px;
+      height: 200px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 98px;
+        height: 98px;
+        border-radius: 50%;
+        border: 1px solid #ebedf0;
+      }
+
+      svg {
+        display: block;
+        height: 100%;
+        width: 100%;
+        overflow: visible;
+      }
+    }
+
+    &--circle {
+      fill: rgba(0, 0, 0, 0);
+      stroke-width: 1;
+      stroke-dashoffset: 25;
+      stroke: hsl(180, 70%, 30%);
+    }
+  }
+}

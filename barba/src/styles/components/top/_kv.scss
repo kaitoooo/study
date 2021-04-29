@@ -1,0 +1,153 @@
+.kv {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('../img/img1.jpg');
+
+  &::before {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: ' ';
+  }
+
+  &__flex {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: get_vw(100) auto 0;
+    width: 70%;
+    z-index: 3;
+    @include sp {
+      width: 90%;
+    }
+
+    &--item {
+      width: 50%;
+      border: 1px solid rgba(151, 151, 151, 0.4);
+      @include sp {
+        width: 100%;
+        margin: 0 0 get_vw_sp(50);
+      }
+    }
+
+    &--link {
+      position: relative;
+      display: block;
+      padding: get_vw(200) 0;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-family: 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', 'HG明朝E';
+      @include sp {
+        padding: get_vw_sp(80) 0;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        border: solid 1px #fff;
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transform: scale(1, 1);
+        transition: all 0.3s ease-out;
+      }
+
+      &-no01 {
+        &:hover {
+          &:after {
+            background-image: url('../img/img2.jpg');
+          }
+        }
+      }
+      &-no02 {
+        &:hover {
+          &:after {
+            background-image: url('../img/img3.jpg');
+          }
+        }
+      }
+      &-no03 {
+        &:hover {
+          &:after {
+            background-image: url('../img/img4.jpg');
+          }
+        }
+      }
+      &-no04 {
+        &:hover {
+          &:after {
+            background-image: url('../img/img5.jpg');
+          }
+        }
+      }
+      &:hover {
+        &:after {
+          background-size: 100%;
+          background-repeat: no-repeat;
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
+}
+section figure {
+  width: 400px;
+  height: 266px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  background: red;
+}
+
+.sample3 {
+  color: #fff;
+}
+.sample3 figure:after {
+  position: absolute;
+  border: solid 1px #fff;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transform: scale(1, 1);
+  transition: all 0.3s ease-out;
+}
+.sample3 figure:hover:after {
+  opacity: 1;
+  transform: scale(0.92, 0.88);
+}
+.sample3 figcaption {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1em;
+  font-size: 20px;
+  letter-spacing: 5px;
+  opacity: 0;
+  transition: all 0.3s ease-out 0.2s;
+}
+.sample3 figure:hover figcaption {
+  letter-spacing: 1px;
+  opacity: 1;
+}
+.sample3 figure img {
+  transition: all 0.8s ease-out;
+}
+.sample3 figure:hover img {
+  opacity: 0.4;
+  transform: scale(1.3);
+}

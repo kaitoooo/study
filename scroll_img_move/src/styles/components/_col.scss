@@ -1,0 +1,36 @@
+.col {
+  margin: 200px 0;
+  @include sp {
+    margin: get_vw_sp(100) 0;
+  }
+  &__flex {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: get_vw(1700);
+    margin: 0 auto;
+    @include sp {
+      width: 90%;
+      flex-wrap: wrap;
+    }
+
+    &--item {
+      width: get_vw(500);
+      @include sp {
+        width: 100%;
+        margin: 0 0 get_vw_sp(20);
+      }
+
+      .item__text {
+        font-size: 1.3rem;
+        line-height: 1.5;
+        padding: get_vw(10) get_vw(20);
+        font-family: 'Noto Sans', sans-serif;
+        @include sp {
+          font-size: 1.2rem;
+          padding: get_vw_sp(5) get_vw_sp(10);
+        }
+      }
+    }
+  }
+}

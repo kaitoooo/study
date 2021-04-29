@@ -1,0 +1,217 @@
+.finish {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 10000;
+  transform: translateY(-1000px);
+
+  &.is-show {
+    transform: translateY(0);
+    animation: bound1 1s linear;
+  }
+
+  &__confetti {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    canvas {
+      background: #fff;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+
+  &__main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+
+    &--img {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      transform: scale(3);
+      opacity: 0;
+      width: get_vw(600);
+      height: 22vw;
+      @include sp {
+        width: get_vw_sp(250);
+        height: get_vw_sp(250);
+      }
+      &.is-show {
+        opacity: 1;
+        transition: all 1.7s;
+        transform: scale(1);
+      }
+    }
+
+    &--text {
+      position: absolute;
+      top: get_vw(100);
+      width: 100%;
+      text-align: center;
+      font-family: 'Noto Serif JP', serif;
+      color: #333;
+      font-size: get_vw(40);
+      line-height: 1.4;
+      transform: translateY(-300px);
+      @include sp {
+        top: get_vw_sp(50);
+        font-size: get_vw_sp(20);
+      }
+
+      &.is-show {
+        transition: all 1s;
+        transform: translateY(0);
+      }
+    }
+
+    &--audience {
+      position: absolute;
+      bottom: 0;
+      left: 0px;
+      z-index: 1;
+      width: get_vw(650);
+      opacity: 0;
+      @include sp {
+        display: none;
+      }
+      &.is-show {
+        transition: all 1s;
+        opacity: 1;
+        animation: loop3 1s infinite;
+      }
+    }
+    &--audience2 {
+      position: absolute;
+      bottom: 0;
+      left: get_vw(30);
+      width: get_vw(570);
+      z-index: 2;
+      transform: translateY(500px);
+      @include sp {
+        display: none;
+      }
+      &.is-show {
+        transition: all 1s;
+        transform: translateY(0);
+      }
+      &.is-anim {
+        animation: loop 1s infinite;
+      }
+    }
+    &--audience3 {
+      position: absolute;
+      bottom: 0;
+      right: get_vw(30);
+      z-index: 2;
+      width: get_vw(580);
+      transform: translateY(500px);
+      @include sp {
+        width: 100%;
+      }
+      &.is-show {
+        transition: all 1s;
+        transform: translateY(0);
+      }
+      &.is-anim {
+        animation: loop2 1s infinite;
+      }
+    }
+    &--audience4 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      width: get_vw(600);
+      opacity: 0;
+      @include sp {
+        width: 100%;
+      }
+      &.is-show {
+        transition: all 1s;
+        opacity: 1;
+        animation: loop4 1s infinite;
+      }
+    }
+    img {
+      vertical-align: bottom;
+    }
+    &--wa1 {
+      position: absolute;
+      bottom: get_vw(200);
+      right: 0;
+      z-index: 1;
+      width: get_vw(200);
+      opacity: 0;
+      @include sp {
+        width: get_vw_sp(100);
+        bottom: get_vw_sp(100);
+      }
+      &.is-show {
+        transition: all 1s;
+        opacity: 1;
+        animation: wa1 1s infinite;
+      }
+    }
+    &--wa2 {
+      position: absolute;
+      bottom: get_vw(200);
+      left: 0;
+      z-index: 1;
+      width: get_vw(200);
+      opacity: 0;
+      transform: rotate(-85deg);
+      @include sp {
+        display: none;
+      }
+      &.is-show {
+        transition: all 1s;
+        opacity: 1;
+        animation: wa1 1s infinite;
+      }
+    }
+    &--kya {
+      position: absolute;
+      bottom: get_vw(200);
+      right: get_vw(500);
+      z-index: 1;
+      width: get_vw(200);
+      transform: rotate(-45deg);
+      opacity: 0;
+      @include sp {
+        width: get_vw_sp(100);
+        bottom: get_vw_sp(100);
+        right: get_vw_sp(250);
+      }
+      &.is-show {
+        transition: all 1s;
+        opacity: 1;
+        animation: wa1 1s infinite;
+      }
+    }
+    &--kya2 {
+      position: absolute;
+      bottom: get_vw(200);
+      left: get_vw(500);
+      z-index: 1;
+      width: get_vw(200);
+      opacity: 0;
+      transform: rotate(5deg);
+      @include sp {
+        display: none;
+      }
+      &.is-show {
+        transition: all 1s;
+        opacity: 1;
+        animation: wa1 1s infinite;
+      }
+    }
+  }
+}

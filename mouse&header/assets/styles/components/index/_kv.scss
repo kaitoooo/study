@@ -1,0 +1,203 @@
+.kv {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: $color_white;
+    transition: ease 0.5s;
+    overflow: hidden;
+    z-index: 998;
+
+    &.is-hidden {
+        overflow: scroll;
+        transition: 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.333s, opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.333s;
+    }
+
+    &__arrow {
+        position: absolute;
+        left: 50%;
+        bottom: 3%;
+        z-index: 2;
+        padding: 10px 10px 110px;
+        overflow: hidden;
+        color: $color_black;
+        font-size: 1.2rem;
+        font-family: $font_all;
+        writing-mode: vertical-lr;
+        text-decoration: none;
+        opacity: 0;
+        transition: ease-in-out 0.5s;
+        @include sp {
+            font-size: 1.1rem;
+            bottom: 0;
+        }
+
+        &.is-show {
+            transition: ease-in-out 0.5s;
+            opacity: 1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 1px;
+            height: 100px;
+            background: $color_black;
+            animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+            @include sp {
+                height: 50px;
+                bottom: 30%;
+            }
+        }
+    }
+    @keyframes sdl {
+        0% {
+            transform: scale(1, 0);
+            transform-origin: 0 0;
+        }
+        50% {
+            transform: scale(1, 1);
+            transform-origin: 0 0;
+        }
+        50.1% {
+            transform: scale(1, 1);
+            transform-origin: 0 100%;
+        }
+        100% {
+            transform: scale(1, 0);
+            transform-origin: 0 100%;
+        }
+    }
+
+    &__block {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        &--inner {
+            text-align: center;
+            overflow: hidden;
+        }
+
+        &--text {
+            display: inline-block;
+            font-family: $font_all;
+            font-weight: bold;
+            transform: translate3d(0, 100%, 0);
+            visibility: hidden;
+            font-size: get_vw(80);
+            letter-spacing: 5px;
+            @include sp {
+                font-size: get_vw_sp(17);
+            }
+        }
+
+        &.is-show {
+            .kv__block--no01 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.333s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.333s;
+            }
+            .kv__block--no02 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.343s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.343s;
+            }
+            .kv__block--no03 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.353s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.353s;
+            }
+            .kv__block--no04 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.363s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.363s;
+            }
+            .kv__block--no05 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.373s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.373s;
+            }
+            .kv__block--no06 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.383s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.383s;
+            }
+            .kv__block--no07 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.413s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.413s;
+            }
+            .kv__block--no08 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.443s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.443s;
+            }
+            .kv__block--no09 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.453s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.453s;
+            }
+            .kv__block--no10 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.483s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.483s;
+            }
+            .kv__block--no11 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.493s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.493s;
+            }
+            .kv__block--no12 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.503s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.503s;
+            }
+            .kv__block--no13 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.513s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.513s;
+            }
+            .kv__block--no14 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.543s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.543s;
+            }
+            .kv__block--no15 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.553s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.553s;
+            }
+            .kv__block--no16 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.563s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.563s;
+            }
+            .kv__block--no17 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.573s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.573s;
+            }
+        }
+    }
+}

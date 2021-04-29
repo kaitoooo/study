@@ -1,0 +1,46 @@
+//slider
+@keyframes loop {
+  0% {
+    transform: translateX(2560px); /* 両端を除くため、432 * (n-2) */
+  }
+  100% {
+    transform: translateX(-452px);
+  }
+}
+
+@keyframes loop-left {
+  0% {
+    transform: translateX(-452px);
+    /* 両端を除くため、432 * (n-2) */
+  }
+  100% {
+    transform: translateX(2560px);
+  }
+}
+@keyframes loopSp {
+  0% {
+    transform: translateX(1265px); /* 両端を除くため、216 * (n-2) */
+  }
+  100% {
+    transform: translateX(-236px);
+  }
+}
+@keyframes loopSp-left {
+  0% {
+    transform: translateX(-236px);
+  }
+  100% {
+    transform: translateX(1265px); /* 両端を除くため、216 * (n-2) */
+  }
+}
+@keyframes sdb {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

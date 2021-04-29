@@ -1,0 +1,48 @@
+//デフォルト
+// .page-enter-active,
+// .page-leave-active {
+//   transition: opacity 0.5s;
+// }
+// .page-enter,
+// .page-leave-active {
+//   opacity: 0;
+// }
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+  animation: slide-in 0.5s;
+}
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+  animation: slide-out 0.5s;
+}
+@keyframes slide-in {
+  0% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slide-out {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+.sp__only {
+  display: none;
+
+  @media all and (max-width: 768px) {
+    display: block;
+  }
+}
+@media all and (max-width: 768px) {
+  .pc__only {
+    display: none;
+  }
+}

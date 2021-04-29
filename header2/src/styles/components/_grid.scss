@@ -1,0 +1,11 @@
+.grid {
+  width: 90%;
+  margin: 0 auto 100px;
+  &__item {
+    margin: 10px;
+    @include sp {
+      width: calc(100% / 3 - 12px);
+      margin: get_vw_sp(4);
+    }
+  }
+}

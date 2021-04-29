@@ -1,0 +1,52 @@
+.kv {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-weight: bold;
+    font-size: get_vw(100);
+    font-family: 'Fraunces', serif;
+    @include sp {
+      top: 40%;
+      font-size: get_vw_sp(50);
+    }
+  }
+  &__scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    z-index: 2;
+    padding: 10px 10px 110px;
+    overflow: hidden;
+    color: #333;
+    font-size: 1.2rem;
+    font-family: 'Fraunces', serif;
+    writing-mode: vertical-lr;
+    text-decoration: none;
+    @include sp {
+      font-size: 1.1rem;
+      bottom: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 1px;
+      height: 100px;
+      background: #333;
+      animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+      @include sp {
+        height: 50px;
+        bottom: 30%;
+      }
+    }
+  }
+}

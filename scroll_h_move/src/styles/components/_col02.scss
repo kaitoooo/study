@@ -1,0 +1,53 @@
+.col02 {
+  position: relative;
+  background-color: #005cef;
+  padding: get_vw(50) 0;
+  overflow-x: hidden;
+  @include sp {
+    padding: get_vw_sp(25) 0;
+  }
+
+  &__loop {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  &__flex {
+    width: 100vw;
+    display: flex;
+    flex-shrink: 0;
+    list-style-type: none;
+    animation: loop 70s linear infinite;
+    transform: translateX(100%);
+    @include sp {
+      animation: loopSp 20s linear infinite;
+    }
+
+    &--item {
+      display: inline-block;
+      width: 100%;
+      min-width: 150px;
+      margin-right: 20px;
+      list-style: none;
+      text-align: center;
+      @include sp {
+        min-width: 30px;
+        margin-right: 20px;
+      }
+
+      &-text {
+        font-size: get_vw(80);
+        line-height: 1.4;
+        color: #fff;
+        letter-spacing: 50px;
+        font-family: 'Yusei Magic', sans-serif;
+        @include sp {
+          font-size: get_vw_sp(30);
+          letter-spacing: 60px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.col02 {
+  position: relative;
+  padding: 100px 0 0;
+  @include sp {
+    padding: get_vw_sp(50) 0 0;
+  }
+  &__title {
+    color: #000;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    margin: 0 50px 50px auto;
+    text-align: right;
+    @include sp {
+      font-size: 2rem;
+      padding: 0 0 0 get_vw_sp(25);
+      margin: 0 0 get_vw_sp(25);
+    }
+  }
+
+  &__flex {
+    display: flex;
+    width: 80%;
+    margin: 0 auto 100px;
+    list-style-type: none;
+    align-items: flex-end;
+    @include sp {
+      width: 90%;
+      flex-wrap: wrap;
+      margin: 0 auto get_vw_sp(50);
+    }
+
+    &--item {
+      margin: 0 20px;
+      @include sp {
+        margin: 0 auto get_vw_sp(10);
+      }
+    }
+
+    .item__left {
+      width: 60%;
+      @include sp {
+        width: 100%;
+      }
+    }
+    .item__right {
+      width: 40%;
+      line-height: 3;
+      font-size: 1.3rem;
+      font-family: 'Noto Sans', sans-serif;
+      @include sp {
+        width: 100%;
+        line-height: 1.5;
+      }
+    }
+  }
+}

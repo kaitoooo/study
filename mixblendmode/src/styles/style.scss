@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+@import 'base/_reset';
+@import 'modules/variables';
+@import 'modules/functions';
+@import 'modules/animation';
+@import 'modules/mixin';
+@import 'modules/mq';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/r-contents';
+@import 'components/l-contents';
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.sp__only {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+.pc__only {
+  @include sp {
+    display: none;
+  }
+}
+img {
+  vertical-align: bottom;
+}

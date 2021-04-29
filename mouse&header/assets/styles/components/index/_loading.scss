@@ -1,0 +1,142 @@
+.loading {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: $color_white;
+    transition: ease 0.5s;
+    overflow: hidden;
+    z-index: 10000;
+
+    &.is-hidden {
+        overflow: scroll;
+        transition: 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.333s, opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.333s;
+    }
+
+    &__block {
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+
+        &--inner {
+            text-align: center;
+            overflow: hidden;
+        }
+
+        &--text {
+            display: inline-block;
+            font-family: $font_all;
+            font-weight: bold;
+            transform: translate3d(0, 100%, 0);
+            visibility: hidden;
+            font-size: get_vw(80);
+            letter-spacing: 5px;
+        }
+
+        &.is-show {
+            .loading__block--no01 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.333s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.333s;
+            }
+            .loading__block--no02 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.343s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.343s;
+            }
+            .loading__block--no03 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.353s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.353s;
+            }
+            .loading__block--no04 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.363s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.363s;
+            }
+            .loading__block--no05 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.373s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.373s;
+            }
+            .loading__block--no06 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.383s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.383s;
+            }
+            .loading__block--no07 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.413s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.413s;
+            }
+            .loading__block--no08 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.443s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.443s;
+            }
+            .loading__block--no09 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.453s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.453s;
+            }
+            .loading__block--no10 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.483s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.483s;
+            }
+            .loading__block--no11 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.493s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.493s;
+            }
+            .loading__block--no12 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.503s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.503s;
+            }
+            .loading__block--no13 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.513s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.513s;
+            }
+            .loading__block--no14 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.543s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.543s;
+            }
+            .loading__block--no15 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.553s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.553s;
+            }
+            .loading__block--no16 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.563s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.563s;
+            }
+            .loading__block--no17 {
+                transform: translateZ(0);
+                visibility: visible;
+                transition: transform 0.666s cubic-bezier(0.1, 0, 0.1, 1) 0.573s,
+                    opacity 1.333s cubic-bezier(0.1, 0, 0.1, 1) 0.573s;
+            }
+        }
+    }
+}

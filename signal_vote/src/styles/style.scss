@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+@import 'base/_reset';
+@import 'modules/variables';
+@import 'modules/functions';
+@import 'modules/animation';
+@import 'modules/mixin';
+@import 'modules/mq';
+@import 'components/main';
+@import 'components/loading';
+@import 'components/finish';
+
+body {
+  overflow: hidden;
+}

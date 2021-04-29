@@ -1,0 +1,133 @@
+.col01 {
+  position: relative;
+
+  .target {
+    &.is-show {
+      &::before {
+        animation: text 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      }
+    }
+  }
+
+  &__flex {
+    display: flex;
+    height: 100%;
+
+    &--item {
+      list-style-type: none;
+
+      &-left {
+        width: 40%;
+        position: sticky;
+        top: 0;
+        min-height: 550px;
+        max-height: 930px;
+        @include sp {
+          display: none;
+        }
+
+        &-text {
+          position: absolute;
+          top: 43%;
+          left: 50%;
+          width: 70%;
+          transform: translate(-50%, -50%);
+          font-size: get_vw(50);
+          line-height: 2;
+          text-align: center;
+          color: #fff;
+          background-color: #0075aa;
+          font-family: 'Fraunces', serif;
+          overflow: hidden;
+
+          &::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+            pointer-events: none;
+            z-index: 1;
+          }
+        }
+      }
+
+      &-right {
+        width: 60%;
+        padding: 0 0 get_vw(50);
+        background-color: #e0f4fc;
+        @include sp {
+          width: 100%;
+        }
+      }
+    }
+    &--img {
+      display: block;
+      margin: get_vw(20);
+
+      &-flex {
+        display: flex;
+        justify-content: space-between;
+        @include sp {
+          flex-wrap: wrap;
+        }
+
+        img {
+          width: 48%;
+          @include sp {
+            display: block;
+            width: 90%;
+            margin: 0 auto get_vw_sp(10);
+          }
+        }
+      }
+      &-flex2 {
+        display: flex;
+        justify-content: space-between;
+        @include sp {
+          flex-wrap: wrap;
+        }
+
+        img {
+          width: 31%;
+          @include sp {
+            display: block;
+            width: 90%;
+            margin: 0 auto get_vw_sp(10);
+          }
+        }
+      }
+      &-flex3 {
+        display: flex;
+        justify-content: space-between;
+        @include sp {
+          flex-wrap: wrap;
+        }
+
+        img {
+          width: 24%;
+          @include sp {
+            display: block;
+            width: 90%;
+            margin: 0 auto get_vw_sp(10);
+          }
+        }
+      }
+    }
+    &--text {
+      padding: 0 get_vw(30);
+      margin: 0 0 get_vw(50);
+      font-size: get_vw(25);
+      line-height: 2;
+      color: #333;
+      font-family: 'Fraunces', serif;
+      @include sp {
+        padding: 0 get_vw_sp(15);
+        margin: 0 0 get_vw_sp(25);
+        font-size: get_vw_sp(15);
+      }
+    }
+  }
+}

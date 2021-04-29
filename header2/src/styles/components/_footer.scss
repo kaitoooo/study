@@ -1,0 +1,28 @@
+.footer {
+  padding: 20px 0 0;
+  background-color: #333;
+
+  &__link {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    margin: 0 0 80px 20px;
+    transition: all 0.4s;
+    font-family: 'Noto Sans', sans-serif;
+
+    &:hover {
+      color: #333;
+      transition: all 0.4s;
+    }
+  }
+
+  &__small {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+    font-family: 'Noto Sans', sans-serif;
+  }
+}

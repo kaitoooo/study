@@ -1,0 +1,33 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  mix-blend-mode: difference;
+  z-index: 3;
+
+  &__flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: get_vw(50) get_vw(30) get_vw(50) 0;
+
+    &--item {
+      margin: 0 get_vw(15);
+    }
+
+    &--link {
+      position: relative;
+      display: block;
+      padding: get_vw(5) 0;
+      color: #fff;
+      text-align: left;
+      text-decoration: none;
+      font-family: 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', 'HG明朝E';
+      @include sp {
+        font-size: get_vw_sp(14);
+      }
+    }
+  }
+}

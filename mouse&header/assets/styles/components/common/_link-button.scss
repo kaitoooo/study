@@ -1,0 +1,45 @@
+.link-button {
+    &__label {
+        position: relative;
+        display: block;
+        width: get_vw(300);
+        font-family: $font_all;
+        font-size: get_vw(20);
+        padding: get_vw(20) get_vw(40);
+        margin: get_vw(20) 0 0;
+        background-color: $color-black;
+        color: $color-white;
+        @include sp {
+            width: get_vw_sp(150);
+            font-size: get_vw_sp(17);
+            padding: get_vw_sp(10) get_vw_sp(20);
+            margin: get_vw_sp(10) 0 0;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 22px;
+            right: 30px;
+            width: 40px;
+            height: 8px;
+            border-bottom: 1px solid $color-white;
+            border-right: 1px solid $color-white;
+            transform: skew(45deg);
+            transition: ease 0.5s;
+            @include sp {
+                bottom: get_vw_sp(15);
+                right: get_vw_sp(15);
+                width: get_vw_sp(20);
+                height: get_vw_sp(4);
+            }
+        }
+
+        &:hover {
+            &::after {
+                right: 20px;
+                transition: ease 0.5s;
+            }
+        }
+    }
+}

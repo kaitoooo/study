@@ -1,0 +1,46 @@
+@charset 'UTF-8';
+@import 'modules/variables';
+@import 'modules/functions';
+@import 'modules/animation';
+@import 'modules/mixin';
+@import 'modules/mq';
+@import 'base/base';
+
+.page-enter-active,
+.page-leave-active {
+    transition: opacity 0.5s;
+    animation: slide-in 0.5s;
+}
+.page-enter,
+.page-leave-active {
+    opacity: 0;
+    animation: slide-out 0.5s;
+}
+@keyframes slide-in {
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slide-out {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(50px);
+    }
+}
+.pc {
+    @include sp {
+        display: none;
+    }
+}
+
+.sp {
+    display: none;
+    @include sp {
+        display: block;
+    }
+}

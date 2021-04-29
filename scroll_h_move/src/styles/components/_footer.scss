@@ -1,0 +1,99 @@
+.footer {
+  position: relative;
+  width: 100%;
+  height: get_vw(600);
+  background-color: #fff;
+  overflow: hidden;
+  @include sp {
+    height: get_vw_sp(500);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #ff1f25;
+    right: -100%;
+    top: 0;
+    transition: all 0.6s;
+    z-index: 1;
+  }
+
+  &.is-show {
+    &::before {
+      right: 0;
+      transition: all 0.6s;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    width: 80%;
+    height: get_vw(600);
+    background-color: #ffdd18;
+    left: -80%;
+    transition: all 0.6s;
+    z-index: 1;
+    @include sp {
+      height: get_vw_sp(500);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: get_vw(700);
+      height: get_vw(700);
+      border-radius: 50%;
+      background-color: #005cef;
+      right: get_vw(-350);
+      top: 0;
+      transition: all 0.4s;
+      z-index: 1;
+      @include sp {
+        width: get_vw_sp(500);
+        height: get_vw_sp(500);
+        right: get_vw_sp(-250);
+      }
+    }
+    &.is-show {
+      left: 20%;
+      transition: all 0.6s;
+    }
+  }
+
+  &__block {
+    position: relative;
+    z-index: 2;
+  }
+  &__link {
+    display: block;
+    color: #fff;
+    font-size: get_vw(60);
+    margin: 0 0 80px 20px;
+    transition: all 0.4s;
+    font-family: 'Yusei Magic', sans-serif;
+    text-decoration: none;
+    @include sp {
+      font-size: get_vw_sp(30);
+    }
+
+    &:hover {
+      color: #333;
+      transition: all 0.4s;
+    }
+  }
+  &__small {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+    font-family: 'Yusei Magic', sans-serif;
+    z-index: 2;
+  }
+}

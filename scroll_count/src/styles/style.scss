@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+@import 'base/_reset';
+@import 'modules/variables';
+@import 'modules/functions';
+@import 'modules/animation';
+@import 'modules/mixin';
+@import 'modules/mq';
+@import 'components/percent';
+@import 'components/kv';
+@import 'components/col01';
+@import 'components/col02';
+@import 'components/col03';
+@import 'components/footer';
+
+.fadeout {
+  opacity: 0;
+  transform: translateY(30px);
+
+  &.is-fadeIn {
+    opacity: 1;
+    transform: translate(0);
+    transition: all 0.8s;
+  }
+}

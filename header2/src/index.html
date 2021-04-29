@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="," />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta property="og:title" content="" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  </head>
+  <body>
+    <header class="header" data-role="header">
+      <div class="header__bg" data-role="headerBg"></div>
+      <ul class="header__flex" data-role="headerInner">
+        <li class="flex__item flex__item--right">
+        </li>
+        <li class="flex__item flex__item--left">
+          <a href="/" class="left__text" data-role="headerText01">Menu1</a>
+          <a href="/" class="left__text" data-role="headerText02">Menu2</a>
+          <a href="/" class="left__text" data-role="headerText03">Menu3</a>
+          <div class="left__btn" data-role="headerOpen"><span></span></div>
+        </li>
+      </ul>
+      <div class="header__menu" data-role="headerContents">
+         <ul class="header__menu--flex">
+          <li class="flex__item">
+            <a href="/" class="flex__item--link">
+              Link1
+            </a>
+          </li>
+          <li class="flex__item">
+            <a href="/" class="flex__item--link">
+              Link2
+            </a>
+          </li>
+          <li class="flex__item">
+            <a href="/" class="flex__item--link">
+              Link3
+            </a>
+          </li>
+          <li class="flex__item">
+            <a href="/" class="flex__item--link">
+              Link4
+            </a>
+          </li>
+         </ul>
+      </div>
+    </header>
+    <main>
+      <section class="top" id="top">
+        <h1 class="top__title">Macy</h1>
+      </section>
+      <section class="grid" id="grid">
+        <div v-for="(photoItem, index) in photoList" v-bind:key="index" class="grid__item">
+          <img :src="photoItem.photoName" :width="photoItem.width" alt="img">
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a href="#top" class="footer__link">Page Top</a>
+      <small class="footer__small">kaito takase @2021</small>
+    </footer>
+  </body>
+</html>

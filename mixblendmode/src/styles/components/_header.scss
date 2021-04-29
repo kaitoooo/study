@@ -1,0 +1,50 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  color: #fff;
+  mix-blend-mode: difference;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include sp {
+      flex-wrap: wrap;
+    }
+  }
+  .item__left {
+    width: 100px;
+    margin: 30px 0 0 30px;
+    @include sp {
+      width: get_vw_sp(50);
+      margin: get_vw_sp(15) 0 0 get_vw_sp(15);
+    }
+  }
+  .item__right {
+    display: flex;
+    margin: 30px 30px 0 0;
+    @include sp {
+      margin: get_vw_sp(10) 0 0 get_vw_sp(5);
+    }
+
+    &--link {
+      font-size: 1.6rem;
+      margin: 0 10px;
+      font-weight: bold;
+      color: #fff;
+      font-family: 'Noto Sans', sans-serif;
+      transition: all 0.3s;
+      @include sp {
+        font-size: get_vw_sp(15);
+      }
+
+      &:hover {
+        color: rgb(112, 112, 112);
+        transition: all 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.last {
+  background-color: #000;
+  padding: get_vw(50) 0 get_vw(150);
+  @include sp {
+    padding: get_vw_sp(25) 0 0;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: get_vw(40);
+    margin: 0 auto get_vw(80);
+    color: #fff;
+    font-family: 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', 'HG明朝E';
+    @include sp {
+      margin: 0 auto get_vw_sp(40);
+      font-size: get_vw_sp(20);
+    }
+  }
+
+  &__flex {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    opacity: 0;
+    transform: translateY(40px);
+    @include sp {
+      flex-wrap: wrap;
+    }
+    &.is-show {
+      opacity: 1;
+      transform: translate(0);
+      transition: all 0.5s;
+    }
+
+    &--text {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 46%;
+      text-align: center;
+      font-size: get_vw(20);
+      color: #333;
+      font-family: 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', 'ヒラギノ明朝 ProN W6', 'HiraMinProN-W6', 'HG明朝E';
+      @include sp {
+        top: auto;
+        left: auto;
+        bottom: 0;
+        right: 0;
+        font-size: get_vw_sp(14);
+      }
+    }
+    &--arrow {
+      position: relative;
+      display: block;
+      width: 100px;
+      margin: get_vw(300) auto 0;
+      @include sp {
+        position: absolute;
+        bottom: 0;
+        right: get_vw_sp(70);
+        margin: 0;
+      }
+
+      &-span {
+        position: absolute;
+        top: 0;
+        left: 68px;
+        width: 12px;
+        height: 12px;
+        margin-left: -12px;
+        border-left: 1px solid #333;
+        border-bottom: 1px solid #333;
+        transform: rotate(45deg);
+        animation: sdb 2s infinite;
+        opacity: 0;
+        box-sizing: border-box;
+        @include sp {
+          top: -20px;
+        }
+        &:nth-of-type(1) {
+          animation-delay: 0s;
+        }
+        &:nth-of-type(2) {
+          left: 61px;
+          animation-delay: 0.15s;
+        }
+        &:nth-of-type(3) {
+          left: 52px;
+          animation-delay: 0.3s;
+        }
+      }
+    }
+
+    &--item {
+      position: relative;
+      width: 50%;
+      height: get_vw(600);
+      overflow: hidden;
+
+      &-left {
+        overflow: hidden;
+        height: get_vw(600);
+        @include sp {
+          width: get_vw_sp(300);
+          height: get_vw_sp(203);
+          z-index: 2;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-color: rgba($color: #000, $alpha: 0.5);
+          transition: ease 0.8s;
+          z-index: 2;
+          @include sp {
+            background-color: rgba($color: #000, $alpha: 0);
+          }
+        }
+      }
+      &-right {
+        margin: get_vw(100) 0 0;
+        background-color: #fff;
+        @include sp {
+          width: 100%;
+          height: get_vw_sp(250);
+          margin: 0;
+          transform: translateY(-170px);
+          z-index: 1;
+        }
+      }
+      &:hover {
+        &::before {
+          background-color: rgba($color: #000, $alpha: 0);
+        }
+      }
+    }
+  }
+}

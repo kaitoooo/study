@@ -1,0 +1,25 @@
+.footer {
+  padding: 20px 20px 0;
+  background-color: $color-dark;
+
+  &__link {
+    display: block;
+    color: $color-white;
+    font-size: 16px;
+    margin: 0 0 80px;
+    transition: all 0.4s;
+
+    &:hover {
+      color: $color-orange;
+      transition: all 0.4s;
+    }
+  }
+
+  &__small {
+    display: block;
+    color: $color-white;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 0 20px;
+  }
+}

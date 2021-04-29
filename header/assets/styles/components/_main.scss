@@ -1,0 +1,35 @@
+.main {
+  width: 100%;
+  padding: 100px 0;
+  @include sp {
+    padding: get_vw_sp(50) 0;
+  }
+
+  &__title {
+    text-align: center;
+    @include sp {
+      font-size: get_vw_sp(20);
+    }
+  }
+
+  &__wrap {
+    margin: auto;
+    width: 90%;
+    @include sp {
+      width: 95%;
+    }
+
+    &--item {
+      width: calc(100% / 4 - 32px);
+      margin: 10px;
+      @include sp {
+        width: calc(100% / 3 - 12px);
+        margin: get_vw_sp(4);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
