@@ -3,7 +3,16 @@
         <div class="header__inner">
             <nav class="header__nav" :class="{ 'is-active': isNavOpen }">
                 <div class="header__nav--list">
-                    <nuxt-link v-for="(link, index) in headerLinkList" :key="index" :to="link.href.url" :target="link.href.blank ? '_blank' : false" :rel="link.href.blank ? 'noopener' : false" v-html="link.label" class="header__nav--link" data-cursor="target"></nuxt-link>
+                    <nuxt-link
+                        v-for="(link, index) in headerLinkList"
+                        :key="index"
+                        :to="link.href.url"
+                        :target="link.href.blank ? '_blank' : false"
+                        :rel="link.href.blank ? 'noopener' : false"
+                        v-html="link.label"
+                        class="header__nav--link"
+                        data-cursor="target"
+                    ></nuxt-link>
                 </div>
             </nav>
             <button class="header__trigger" @click="toggleNav">

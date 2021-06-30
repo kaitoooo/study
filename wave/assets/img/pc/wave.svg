@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="wave" width="1200" height="40" viewBox="0 0 1200 40">
+    <path class="wave" d="M0 20
+        C    0 20,  300 40,   600 20
+        C  600 20,  900  0,  1200 20
+        H 1201 V 41 H -1 Z
+    " fill="white" />
+</svg>

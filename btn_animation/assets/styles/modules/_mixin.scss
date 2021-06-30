@@ -1,0 +1,31 @@
+@mixin center {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+@mixin charming-hover-animate() {
+    .btn__text {
+        &--top {
+            span {
+                transform: translate3d(0, -110%, 0);
+                @for $i from 0 through 15 {
+                    &.char#{$i} {
+                        transition-delay: #{$i * 0.025}s;
+                    }
+                }
+            }
+        }
+        &--bottom {
+            span {
+                transform: translate3d(0, 0, 0);
+                @for $i from 0 through 15 {
+                    &.char#{$i} {
+                        transition-delay: #{0.025 + $i * 0.025}s;
+                    }
+                }
+            }
+        }
+    }
+}
