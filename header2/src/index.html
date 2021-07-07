@@ -14,14 +14,18 @@
     <meta property="og:image" content="" />
     <meta property="og:url" content="" />
     <meta property="og:description" content="" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="3D_Demo_OrbitControls_JP" />
+    <meta name="twitter:title" content="3D Demo OrbitControls" />
+    <meta name="twitter:description" content="OrbitControlsを使用してマウスドラッグに連動した3Dモデルのデモサイトです。" />
+    <meta name="twitter:image" content="https://kaito-takase.dev/3d-watch/ogp.png" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
   <body>
     <header class="header" data-role="header">
       <div class="header__bg" data-role="headerBg"></div>
       <ul class="header__flex" data-role="headerInner">
-        <li class="flex__item flex__item--right">
-        </li>
+        <li class="flex__item flex__item--right"></li>
         <li class="flex__item flex__item--left">
           <a href="/" class="left__text" data-role="headerText01">Menu1</a>
           <a href="/" class="left__text" data-role="headerText02">Menu2</a>
@@ -30,28 +34,20 @@
         </li>
       </ul>
       <div class="header__menu" data-role="headerContents">
-         <ul class="header__menu--flex">
+        <ul class="header__menu--flex">
           <li class="flex__item">
-            <a href="/" class="flex__item--link">
-              Link1
-            </a>
+            <a href="/" class="flex__item--link"> Link1 </a>
           </li>
           <li class="flex__item">
-            <a href="/" class="flex__item--link">
-              Link2
-            </a>
+            <a href="/" class="flex__item--link"> Link2 </a>
           </li>
           <li class="flex__item">
-            <a href="/" class="flex__item--link">
-              Link3
-            </a>
+            <a href="/" class="flex__item--link"> Link3 </a>
           </li>
           <li class="flex__item">
-            <a href="/" class="flex__item--link">
-              Link4
-            </a>
+            <a href="/" class="flex__item--link"> Link4 </a>
           </li>
-         </ul>
+        </ul>
       </div>
     </header>
     <main>
@@ -60,7 +56,7 @@
       </section>
       <section class="grid" id="grid">
         <div v-for="(photoItem, index) in photoList" v-bind:key="index" class="grid__item">
-          <img :src="photoItem.photoName" :width="photoItem.width" alt="img">
+          <img :src="photoItem.photoName" :width="photoItem.width" alt="img" />
         </div>
       </section>
     </main>

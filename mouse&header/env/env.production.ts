@@ -1,4 +1,4 @@
 export const env = {
-    url: 'https://kaito-dev.hubers.asia/study/20210412/',
-    base: '/study/20210412/',
+    url: 'https://kaito-takase.dev/header-mouse-hover/',
+    base: '/header-mouse-hover/',
 };

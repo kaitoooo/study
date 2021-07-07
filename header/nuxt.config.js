@@ -4,7 +4,7 @@ const envSetting = require(`./env/env.${environment}.js`).env;
 
 // meta
 const title = 'Study - Header -';
-const description = '説明';
+const description = '下にスクロールするとヘッダーが隠れ、上にスクロールするとヘッダーが現れます。';
 
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -22,7 +22,7 @@ export default {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:locale', property: 'og:locale', content: 'ja_JP' },
       { hid: 'og:url', property: 'og:url', content: envSetting.url },
-      { hid: 'og:image', property: 'og:image', content: envSetting.url + '/img/ogp.png' },
+      { hid: 'og:image', property: 'og:image', content: envSetting.url + '/ogp.png' },
       { hid: 'og:site_name', property: 'og:site_name', content: title },
       { hid: 'og:title', property: 'og:title', content: title },
       { hid: 'og:description', property: 'og:description', content: description },
@@ -55,7 +55,7 @@ export default {
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     { src: '~/plugins/vue-masonry', ssr: false },
-    { src: '~plugins/vue-scrollto', mode: 'client' }
+    { src: '~plugins/vue-scrollto', mode: 'client' },
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
